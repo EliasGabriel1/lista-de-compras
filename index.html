@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="./content/css/index.css">
+</head>
+
+<body>
+    <main>
+        <h1>Lista de Compras</h1>
+        <div class="input">
+            <input type="text" name="Produto" id="produto" placeholder="Produto">
+            <input type="number" onkeypress="return /\d/.test(String.fromCharCode(event.keyCode || event.which))" name="Valor" id="valor" placeholder="Valor">
+            <button onclick="addproduct()" class="add" id="add-product">
+                <svg width="51" height="41" viewBox="0 0 51 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="51" height="41" rx="7" fill="#2DC461" />
+                    <path
+                        d="M37.8798 11.1899C37.6113 11.1979 37.3566 11.3101 37.1694 11.5027L21.3667 27.3055L14.8639 20.8027C14.6047 20.5328 14.2199 20.424 13.8578 20.5184C13.4956 20.6129 13.2128 20.8956 13.1184 21.2578C13.024 21.6199 13.1328 22.0048 13.4027 22.2639L20.6361 29.4973C21.0396 29.9006 21.6937 29.9006 22.0973 29.4973L38.6306 12.9639C38.9362 12.6669 39.0281 12.2126 38.862 11.8201C38.6959 11.4276 38.3058 11.1773 37.8798 11.1899L37.8798 11.1899Z"
+                        fill="white" />
+                </svg>
+            </button>
+        </div>
+        <div class="table">
+            <table  width="10%" cellspacing="0" cellpadding="4">
+                <thead>
+                    <tr align="center">
+                        <td></td>
+                        <th>Produto</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr align="center">
+                        <td></td>
+                        <th scope="row">Total:</th>
+                        <td class="total">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./content/js/index.js"></script>
+</body>
+
+</html>
